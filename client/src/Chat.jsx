@@ -5,9 +5,7 @@ import {UserContext} from "./UserContext.jsx";
 import {uniqBy} from "lodash";
 import axios from "axios";
 import Contact from "./Contact";
-const dotenv = require('dotenv');
 
-dotenv.config();
 
 export default function Chat() {
   const [ws,setWs] = useState(null);
