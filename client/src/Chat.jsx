@@ -22,8 +22,8 @@ export default function Chat() {
     connectToWs();
   }, [selectedUserId]);
   function connectToWs() {
-    // const ws = new WebSocket('ws://localhost:4040');
-    const ws = new WebSocket('wss://pratalk-wjqr.onrender.com');
+    const ws = new WebSocket('ws://localhost:4040');
+    // const ws = new WebSocket('wss://pratalk-wjqr.onrender.com');
 
     setWs(ws);
     ws.addEventListener('message', handleMessage);
