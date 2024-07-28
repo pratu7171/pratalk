@@ -7,6 +7,7 @@ import axios from "axios";
 import Contact from "./Contact";
 const dotenv = require('dotenv');
 
+dotenv.config();
 
 export default function Chat() {
   const [ws,setWs] = useState(null);
