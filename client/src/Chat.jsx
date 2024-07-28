@@ -5,6 +5,8 @@ import {UserContext} from "./UserContext.jsx";
 import {uniqBy} from "lodash";
 import axios from "axios";
 import Contact from "./Contact";
+const dotenv = require('dotenv');
+
 
 export default function Chat() {
   const [ws,setWs] = useState(null);
@@ -19,7 +21,9 @@ export default function Chat() {
     connectToWs();
   }, [selectedUserId]);
   function connectToWs() {
-    const ws = new WebSocket('ws://localhost:4040');
+    // const ws = new WebSocket('ws://localhost:4040');
+    const ws = new WebSocket(process.env.REACT_APP_WS_URL);
+
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
