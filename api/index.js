@@ -21,10 +21,22 @@ const app = express();
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.json());
 app.use(cookieParser());
+// app.use(cors({
+//   credentials: true,
+//   origin: process.env.CLIENT_URL,
+// }));
 app.use(cors({
   credentials: true,
-  origin: process.env.CLIENT_URL,
+  origin: (origin, callback) => {
+    const allowedOrigins = [process.env.CLIENT_URL, 'https://pratalk.vercel.app'];
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
+
 
 async function getUserDataFromRequest(req) {
   return new Promise((resolve, reject) => {
