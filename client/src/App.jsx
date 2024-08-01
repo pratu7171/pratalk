@@ -3,6 +3,7 @@ import {UserContextProvider} from "./UserContext";
 import Routes from "./Routes";
 
 function App() {
+  // axios.defaults.baseURL = 'http://localhost:4040';
   axios.defaults.baseURL = 'https://pratalk-wjqr.onrender.com';
   axios.defaults.withCredentials = true;
   return (
@@ -12,4 +13,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
