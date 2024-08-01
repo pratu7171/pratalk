@@ -276,7 +276,7 @@ export default function Chat() {
             />
           ))}
         </div>
-        <div className="flex flex-col h-[84vh]">
+        <div className="flex flex-col h-[74vh]">
           <div className="flex flex-col w-full h-[84vh] p-2 bg-[#292f3f]">
             <div className="flex-grow">
               {!selectedUserId && (
@@ -287,7 +287,7 @@ export default function Chat() {
                 </div>
               )}
               {!!selectedUserId && (
-                <div className="relative h-screen">
+                <div className="relative h-full">
                   <div className="overflow-y-scroll absolute top-0 left-0 right-0 bottom-2 no-scrollbar">
                     {messagesWithoutDupes.map((message) => (
                       <div
