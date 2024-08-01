@@ -347,7 +347,7 @@ export default function Chat() {
             </div>
             <div>
             {!!selectedUserId && (
-              <form className="flex flex-row gap-2" onSubmit={sendMessage}>
+              <form className="flex flex-row gap-2 fixed mb-1" onSubmit={sendMessage}>
                 <input
                   type="text"
                   value={newMessageText}
