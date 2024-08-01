@@ -276,7 +276,7 @@ export default function Chat() {
             />
           ))}
         </div>
-        <div className="flex flex-col h-[77vh]">
+        <div className="flex flex-col h-[76vh]">
           <div className="flex flex-col w-full h-[84vh] p-2 bg-[#292f3f]">
             <div className="flex-grow">
               {!selectedUserId && (
