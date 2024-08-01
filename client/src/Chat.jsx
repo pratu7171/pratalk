@@ -287,7 +287,7 @@ export default function Chat() {
                 </div>
               )}
               {!!selectedUserId && (
-                <div className="relative h-full">
+                <div className="relative h-screen">
                   <div className="overflow-y-scroll absolute top-0 left-0 right-0 bottom-2 no-scrollbar">
                     {messagesWithoutDupes.map((message) => (
                       <div
@@ -347,7 +347,7 @@ export default function Chat() {
             </div>
             <div>
             {!!selectedUserId && (
-              <form className="flex flex-row gap-2 mt-[-250px] fixed" onSubmit={sendMessage}>
+              <form className="flex flex-row gap-2" onSubmit={sendMessage}>
                 <input
                   type="text"
                   value={newMessageText}
