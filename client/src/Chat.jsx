@@ -298,7 +298,7 @@ export default function Chat() {
                       >
                         <div
                           className={
-                            "text-left inline-block p-2 my-2 rounded-[10px] text-sm border-2 border-white border-opacity-70" +
+                            "text-left inline-block p-2 my-2 rounded-[10px] text-sm" +
                             (message.sender === id
                               ? "md:bg-blue-500 bg-[#272A35] text-[#FFFFFF]"
                               : "md:bg-white bg-[#373E4E] md:text-gray-500 text-[#FFFFFF]")
